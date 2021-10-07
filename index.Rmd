@@ -1,0 +1,140 @@
+---
+title: "An introduction to social care systems"
+author: "Dr David Henderson"
+output:
+  xaringan::moon_reader:
+    lib_dir: libs
+    css: [default, rladies-fonts, my-style.css]
+    nature:
+      highlightStyle: github
+      highlightLines: true
+      countIncrementalSlides: false
+---
+```{r setup, echo=FALSE, message=FALSE, warning=FALSE}
+options(htmltools.dir.version = FALSE,
+        knitr.table.format = "html",
+        echo = FALSE)
+library(tidyverse)
+library(kableExtra)
+```
+
+## Outline
+
+* What is social care?
+  - Definitions
+
+<br/>
+
+* Structure and funding of social care systems
+  - International comparisons
+
+<br/>
+
+* Policy & Politics of social care
+  - Relation to ageing care
+
+<br/>
+
+* Social care and inequalities
+  - What is the evidence base?
+
+---
+## What is social care?
+
+### Sub head 1
+
+* Retrospective observational study
+
+* Included all individuals over the age of 65 in Scotland between April 2015 and March 2016 (n=879,027)
+
+* Data sources
+ - Community Health Index (CHI) central register
+ - Prescribing Information System (PIS)
+ - Unscheduled Care Data Mart (UCD)
+ - Social Care Survey
+
+
+---
+## Structure and funding of social care
+
+### Measures
+
+* Time to first unplanned hospital admission in study period (1st April 2015 - 31st March 2016)
+
+<br/>
+
+* Main independent variables of interest: Social Care (SCS) & Multimorbidity (proxy measurement via prescribing)
+
+<br/>
+
+* Also adjusted for age, sex, and socioeconomic position (SEP).
+
+---
+## Methods
+
+### Statistics
+
+* Kaplan Meier curves plotted to compared rates for those with/without receipt of social care
+
+<br/>
+
+* Cox Proportional Hazard models used to determine Hazard Ratios (HR) for independent variables on unplanned admission
+
+---
+## Results
+
+<img src="files/adm_surv_fig_1-1.png" width="90%"/>
+
+---
+## Results
+
+<img src="files/adm_surv_fig_2-1.png" width="90%"/>
+
+---
+## Limitations
+
+* Descriptive study - no identification of causal links
+
+<br/>
+
+* Preliminary results - simple model reported here - likely to be over-fitted
+
+<br/>
+
+* Social Care data quality 
+ - Misclassification present in SCS
+ - CHI flag for care homes high specificity but low sensitivity (Burton et al, 2019)
+
+<br/>
+
+* Proxy measurement of multimorbidity
+
+.footnote[Burton et al (2019) Identifying care-home residents in routine healthcare datasets: a diagnostic test accuracy study of five methods. *Age & Ageing*. **48:** 114-121. https://doi.org/10.1093/ageing/afy137]
+
+---
+## Conclusion
+
+* Preliminary results only - treat with caution
+
+<br/>
+
+* Tentative evidence of an association between social care receipt and unplanned hospital admission
+
+<br/>
+
+* Would be an important finding in the context of integration of health and social care services in Scotland. 
+
+<br/>
+
+* Routine collection of high quality social care data is required internationally to further understand how these services interact
+
+---
+class: center, middle
+
+## Thanks!
+
+Slightly longer version of this talk available om youtube [here](https://youtu.be/QtZpJc8474Y)
+
+Slides created via the R package [**xaringan**](https://github.com/yihui/xaringan) and available on my GitHub (davidhen).
+
+Twitter: @_davidhen
