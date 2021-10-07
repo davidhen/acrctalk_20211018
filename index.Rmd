@@ -1,140 +1,335 @@
 ---
-title: "An introduction to social care systems"
-author: "Dr David Henderson"
+title: "Care Homes and COVID-19 Deaths"
+subtitle: "An early use of the COVID-19 research dataset"
+author: "David Henderson"
+institute: "Edinburgh Napier University/SCADR"
+date: "7th October 2020"
 output:
   xaringan::moon_reader:
     lib_dir: libs
-    css: [default, rladies-fonts, my-style.css]
+    css: [default, rladies-fonts]
     nature:
       highlightStyle: github
       highlightLines: true
       countIncrementalSlides: false
 ---
-```{r setup, echo=FALSE, message=FALSE, warning=FALSE}
-options(htmltools.dir.version = FALSE,
-        knitr.table.format = "html",
-        echo = FALSE)
-library(tidyverse)
-library(kableExtra)
+```{r setup, include=FALSE}
+options(htmltools.dir.version = FALSE)
+```
+## About me
+
+.pull-left[
+**Research Fellow at** 
+
+<img src="assets/logo.png"/> and
+
+<img src="assets/SCADR Logo_Primary_Full Colour_HI.png" width="80%"/>
+
+]
+--
+
+.pull-right[
+<img src="https://media.giphy.com/media/EAJ0bJCGHA8U/giphy.gif" width ="80%"/>
+]
+
+
+---
+## About me
+.pull-left[
+<img src="https://media.giphy.com/media/l2YWgna32lvNFROG4/giphy.gif"/>
+]
+
+--
+
+.pull-right[
+* **PhD at Urban Big Data Centre (University of Glasgow)**
+
+<br/>
+* **Completed data linkage project involving social care data (Social Care Survey)**
+
+<br/>
+* **Member of Data and Intelligence advisory group for Scottish Government**
+]
+
+---
+class: inverse, center, middle
+
+# Outline
+
+---
+class: centre, middle
+
+- ###Care Home Mortality Project
+--
+   
+- ###Data Quality Issues
+--
+
+- ###Thoughts on the expedited application process for COVID-19 projects
+
+
+---
+background-image: url("assets/care_home_1.png")
+background-size: cover
+
+class: center, bottom, inverse
+
+# Care Homes and COVID-19 Deaths
+
+---
+
+## Background
+
+Almost half of all deaths attributable to COVID-19 in Scotland (and the wider UK) occurred in Care Homes. Despite this, most published research has focussed on the non-Care Home population. 
+
+There are a couple of **possible** reasons for this.
+
+1. Care Home residents can be difficult to identify in routine datasets
+
+1. The immediate research research response was focussed on those most likely to benefit from treatment.<sup>*</sup>
+
+<br/>
+There are even instances of studies where care home data is available (even if not of excellent quality), but analysis is presented with this population removed. 
+
+.footnote[[*] This was not explicitly decided anywhere but reflects my own observations and opinion] 
+
+---
+## Background
+
+```{r out.width="70%", eval=TRUE, fig.align='center', echo=FALSE}
+knitr::include_graphics("assets/fig_6.png")
 ```
 
-## Outline
-
-* What is social care?
-  - Definitions
-
-<br/>
-
-* Structure and funding of social care systems
-  - International comparisons
-
-<br/>
-
-* Policy & Politics of social care
-  - Relation to ageing care
-
-<br/>
-
-* Social care and inequalities
-  - What is the evidence base?
 
 ---
-## What is social care?
+## Background
 
-### Sub head 1
+.pull-left[
+### Example 1
 
-* Retrospective observational study
+<img src="assets/paper_3.png"/>
+]
 
-* Included all individuals over the age of 65 in Scotland between April 2015 and March 2016 (n=879,027)
+--
+.pull-right[
+### Example 2
 
-* Data sources
- - Community Health Index (CHI) central register
- - Prescribing Information System (PIS)
- - Unscheduled Care Data Mart (UCD)
- - Social Care Survey
-
+<img src="assets/paper_4.png"/>
+]
 
 ---
-## Structure and funding of social care
+## Background
 
-### Measures
+.pull-left[
+### Example 3
 
-* Time to first unplanned hospital admission in study period (1st April 2015 - 31st March 2016)
+<img src="assets/paper_1.png"/>
+]
+
+--
+.pull-right[
+### Example 4
+
+<img src="assets/paper_2.png"/>
+]
+
+---
+
+## Background
+
+### Motivating factors (recap)
+
+<br/>
+* **Most studies have concentrated on the *non*-care home population**
 
 <br/>
 
-* Main independent variables of interest: Social Care (SCS) & Multimorbidity (proxy measurement via prescribing)
+* **Where they have reported on care home residents, the CHI flag has been used for indentification- this is not entirely accurate**
 
-<br/>
+---
+## Background
 
-* Also adjusted for age, sex, and socioeconomic position (SEP).
+### What is UPRN?
+
+<img src="assets/uprn.png"/>
+
 
 ---
 ## Methods
 
-### Statistics
+### Aim
 
-* Kaplan Meier curves plotted to compared rates for those with/without receipt of social care
+**To characterise the sociodemographic and health features of those over the age of 65 that have been identified as contracting COVID-19 and their associations with mortality**
 
 <br/>
 
-* Cox Proportional Hazard models used to determine Hazard Ratios (HR) for independent variables on unplanned admission
+Main study period runs from 1st March - 30th June 2020
+
+<br/>
+Utilises the new COVID-19 Research Dataset and expedited approvals process
+
+---
+## Methods
+
+### Data Sources
+
+.pull-left[
+* CHI database
+  - Demographics
+  - CHI Care Home Flag
+  - UPRN (not yet available)
+* NRS Deaths
+* UCD deaths
+* ECOSS
+* PIS
+* Primary Care (not yet available)
+]
+
+.pull-right[
+* Diabetes
+* SICSAG
+* Unscheduled Care (using CUP IDs)
+ - SMR01
+ - A & E
+ - GP OOH
+ - SAS
+ - NHS24]
+
 
 ---
 ## Results
 
-<img src="files/adm_surv_fig_1-1.png" width="90%"/>
+--
+<br/>
+
+```{r out.width="80%", eval=TRUE, fig.align='center', echo=FALSE}
+knitr::include_graphics("https://media.giphy.com/media/pPhYIDiYzOGSA/giphy.gif")
+```
 
 ---
-## Results
+background-image: url("assets/dq.png")
+background-size: cover
 
-<img src="files/adm_surv_fig_2-1.png" width="90%"/>
+class: left, top
 
----
-## Limitations
-
-* Descriptive study - no identification of causal links
-
-<br/>
-
-* Preliminary results - simple model reported here - likely to be over-fitted
-
-<br/>
-
-* Social Care data quality 
- - Misclassification present in SCS
- - CHI flag for care homes high specificity but low sensitivity (Burton et al, 2019)
-
-<br/>
-
-* Proxy measurement of multimorbidity
-
-.footnote[Burton et al (2019) Identifying care-home residents in routine healthcare datasets: a diagnostic test accuracy study of five methods. *Age & Ageing*. **48:** 114-121. https://doi.org/10.1093/ageing/afy137]
+# Data Quality
 
 ---
-## Conclusion
+## Cleaning Data
 
-* Preliminary results only - treat with caution
+* Not a huge amount to say here, except that....
 
-<br/>
-
-* Tentative evidence of an association between social care receipt and unplanned hospital admission
-
-<br/>
-
-* Would be an important finding in the context of integration of health and social care services in Scotland. 
-
-<br/>
-
-* Routine collection of high quality social care data is required internationally to further understand how these services interact
+* The bottom line is that when a dataset is received **every** variable needs checked
+ - Unique values
+ - Spread (spurious values)
+ - Missing Data (what sort?)
+ 
+* Examples
+ - Too many categories
+ - Negative count values
+ - "DUMMY" variables
 
 ---
+## Cleaning Data
+
+### Project structure
+
+
+        directory/
+        -- 01_functions
+        -- 02_scripts
+        -- 03_raw_data
+        -- 04_research
+        ---- 01_import_and_clean
+        ---- 02_descriptive_stats
+        ---- 03_models
+        ---- 04_reports
+        -- 05_derived_data
+        ---- 01_clean_data
+        ---- 02_tables
+        ---- 03_plots
+        ---- 04_models
+        -- README.md
+        -- naming_protocol.md
+---
+## Cleaning Data
+
+### Naming variables
+
+* There is a really useful blog on naming variables by Emily Riederer [here](https://emilyriederer.netlify.app/post/column-name-contracts/)
+
+* Can be cumbersome in a large project (like mine) but I think it is worth it. I have adapted her approach to better fit my project.
+--
+
+ - Level 1 Measure types e.g. `id`, `n`, `amt`, `val`, `dt`, `tm`, `cat`
+ - Level 2 Data source e.g. `chi`, `pis`, `nrsdeaths`, `ucddeaths` `smr1` etc.
+ - Level 3 Details e.g. `age`, `sex`, `los`, `arrive` etc.
+
+--
+
+.pull-left[
+* Examples
+ - `cat_chi_sex`
+ - `n_chi_chlos`
+ - `n_smr1_los` 
+ - `dt_nhs24_arrive` 
+ - `cat_chi_la`
+ ]
+ 
+--
+ .pull-right[
+ * Works well with `dplyr` "select helpers"
+  - `select(starts_with("cat"))`
+  - `select(contains("los"))`
+  - `select(contains("smr1") & starts_with("cat"))`
+  
+]  
+---
+background-image: url("assets/ig.png")
+background-size: cover
+
+class: left, top
+
+# COVID-19 & PBPP
+
+---
+
+## The Old PBPP Process
+
+.pull-left[<img src="https://media.giphy.com/media/RIeMCWC97ln4oprAbX/giphy.gif"/>]
+--
+
+.pull-right[<img src="https://media.giphy.com/media/dsiIZgRZYLBCXaFeoB/giphy.gif"/>]
+
+---
+## PBPP
+
+### Research Data Scotland
+
+<img src="assets/RDS.png"/>
+---
+## PBPP
+
+### Timelines
+
+<img src="assets/timeline.png"/>
+
+---
+## PBPP
+
+### Will it continue?
+
+<img src="https://media.giphy.com/media/Ll2fajzk9DgaY/giphy.gif"/>
+
+---
+
 class: center, middle
 
 ## Thanks!
 
-Slightly longer version of this talk available om youtube [here](https://youtu.be/QtZpJc8474Y)
+### Any questions?
 
-Slides created via the R package [**xaringan**](https://github.com/yihui/xaringan) and available on my GitHub (davidhen).
+Slides created via the R package [**xaringan**](https://github.com/yihui/xaringan) and available from [this link](https://davidhen.github.io/eDRIS_talk_20201007/#1).
 
 Twitter: @_davidhen
+
