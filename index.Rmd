@@ -1,9 +1,8 @@
 ---
-title: "Care Homes and COVID-19 Deaths"
-subtitle: "An early use of the COVID-19 research dataset"
-author: "David Henderson"
-institute: "Edinburgh Napier University/SCADR"
-date: "7th October 2020"
+title: "An introduction to social care systems"
+author: "Dr David Henderson"
+institute: "Usher institute, University of Edinburgh"
+date: "18th October 2021"
 output:
   xaringan::moon_reader:
     lib_dir: libs
@@ -21,7 +20,9 @@ options(htmltools.dir.version = FALSE)
 .pull-left[
 **Research Fellow at** 
 
-<img src="assets/logo.png"/> and
+<img src="assets/usher_institute_new_logo-with_line44x.png" width="80%"/> 
+
+**Previously worked for** 
 
 <img src="assets/SCADR Logo_Primary_Full Colour_HI.png" width="80%"/>
 
@@ -29,26 +30,37 @@ options(htmltools.dir.version = FALSE)
 --
 
 .pull-right[
-<img src="https://media.giphy.com/media/EAJ0bJCGHA8U/giphy.gif" width ="80%"/>
+**PhD at**
+
+<img src="assets/ubdc.png" width ="70%"/>
+
+<img src="assets/glas.png" width ="70%"/>
+
+
 ]
 
 
 ---
 ## About me
 .pull-left[
-<img src="https://media.giphy.com/media/l2YWgna32lvNFROG4/giphy.gif"/>
+
+* **Registered Nurse**
+
+<br/>
+* **Worked in Acute Medicine and Medical High Dependency**
+
+<br/>
+* **Also experience of unscheduled care via NHS24**
+
+<br/>
+* **Member of CMO/CNO Data and intelligence advisory group for care homes and social care**
+
 ]
 
 --
 
 .pull-right[
-* **PhD at Urban Big Data Centre (University of Glasgow)**
-
-<br/>
-* **Completed data linkage project involving social care data (Social Care Survey)**
-
-<br/>
-* **Member of Data and Intelligence advisory group for Scottish Government**
+<img src="https://media.giphy.com/media/EAJ0bJCGHA8U/giphy.gif"/>
 ]
 
 ---
@@ -59,14 +71,19 @@ class: inverse, center, middle
 ---
 class: centre, middle
 
-- ###Care Home Mortality Project
+- ### What is social care?
+--
+
+- ### Policy and politics of social care
+--
+
+- ### Structure and funding of social care systems in an international context
 --
    
-- ###Data Quality Issues
+- ### Social care and inequalities
 --
 
-- ###Thoughts on the expedited application process for COVID-19 projects
-
+- ### Future research
 
 ---
 background-image: url("assets/care_home_1.png")
